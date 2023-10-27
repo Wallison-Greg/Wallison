@@ -1,0 +1,79 @@
+.banner{
+    height: 100vh;
+    background-color: #B98B57;
+    background-image: linear-gradient(45deg, #141414 50%, transparent 0%);
+    display: flex;
+    align-items: center;
+}
+.banner-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    color: #ffff;
+}
+.banner-info h3{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.banner-info h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.8;
+}
+.banner-contact{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+.banner-contact a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #B98B57;
+    padding: 0.7em 1.4em;
+    font-size: 14px;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 700;
+}
+.banner-contact a:nth-child(1){
+    margin-right: 20px;
+}
+.banner-contact span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid #B98B57;
+}
+.banner-contact span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: #141414;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+.banner-contact a:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #B98B57;
+}
+.banner-contact a:hover{
+    color: #141414;
+}
+

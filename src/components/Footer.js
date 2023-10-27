@@ -1,11 +1,26 @@
 import React from 'react'
 import './Footer.css'
 
+//icons 
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 const Footer = () => {
   return (
     <footer className="footer">
-        <h3>minhas tecnologias</h3>
-        <p>Wallison Portfólio &copy; 2023</p>
+        <div className='contact'>
+          <a className='icon' href='https://github.com/Wallison-Greg' target="_blank" rel="noopener noreferrer">
+            <GitHubIcon />
+          </a>
+          <a className='icon' href='#'>
+            <WhatsAppIcon />
+          </a>
+          <a className='icon' href='https://www.linkedin.com/in/wallison-gregorio-ba23a922b/' target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon />
+          </a>
+        </div>
+        <p>Copyright &copy; Wallison 2023</p>
     </footer>
   )
 }

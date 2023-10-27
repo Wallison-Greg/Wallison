@@ -2,5 +2,14 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
-
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  margin: 1px;
+  background-color: #b98b57;
+  border: 1px solid #c4c4c48e;
+  border-radius: 5px;
+}
