@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import './Header.css'
 
 import Logo from '../img/logo_2.png'
-import Footer from './Footer'
 
 const Header = ({black}) => {
 
@@ -20,7 +19,10 @@ const Header = ({black}) => {
             </a>
         </div>
         <div className='menu-area'>
-            <div className={active ? 'hamburger open' : 'hamburger'} onClick={menuMode}>
+            <div 
+                className={active ? 'hamburger open' : 'hamburger'} 
+                onClick={menuMode}
+            >
                 <span></span>
                 <span></span>
                 <span></span>

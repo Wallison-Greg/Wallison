@@ -1,0 +1,19 @@
+.skill{
+    margin: 50px 0px;
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #B98B57;
+    color: #ffff;
+}
+.skill:last-child{
+    border-right: 1px solid #B98B57;
+}
+.skill .title{
+    margin: 10px 0px;
+}
+.skill .desc{
+    color: #c4c4c48e;
+}

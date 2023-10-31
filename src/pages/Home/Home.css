@@ -4,6 +4,7 @@
     background-image: linear-gradient(45deg, #141414 50%, transparent 0%);
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 .banner-info{
     display: flex;
@@ -20,6 +21,10 @@
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.8;
+}
+#dev{
+    color: #B98B57;
+    text-shadow: 2px 2px 1.5px #333;
 }
 .banner-contact{
     display: flex;
@@ -76,4 +81,127 @@
 .banner-contact a:hover{
     color: #141414;
 }
+.banner-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-img img {
+    animation: banner 5s infinite;
+    height: 300px;
+}
 
+.banner-img .sombra{
+    margin-top: 5px;
+    width: 90px;
+    height: 50px;
+    background-color: #141414;
+    border-radius: 55%;
+}
+
+/*About*/
+.about, .skills{
+    margin: 15px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0px;
+}
+.about-area.perfil-img,
+.about-area.about-desc{
+    width: 45%;
+}
+.perfil-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil-img img{
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow:  0px 0px 12px 2px #c5c5c5;
+}
+.perfil-img, .about-desc{
+    width: 40vw;
+}
+.about-desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}
+.about-desc abbr{
+    text-decoration: none;
+}
+.about-desc strong{
+    font-weight: 600;
+}
+
+/*skills*/
+.skills{
+    background-color: #141414;
+}
+.skills .title-text{
+    color: #ffff;
+}
+.skills-area ul{
+    list-style: none;
+    display: flex;
+}
+
+/*botão porjetos*/
+.btn{
+    margin-top: 15px;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+.btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #604425 0%, #B98B57 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+.btn:hover::before {
+    width: 9em;
+}
+
+/*animação*/
+@keyframes banner{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/*responsividade*/
+
+@media (max-width: 825px){
+
+}

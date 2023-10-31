@@ -41,7 +41,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', scrollListener);
     }
-  }, [])
+  }, [height.sizeHeight])
 
   return (
     <div className="App">

@@ -59,12 +59,8 @@ header.black{
     border-bottom: 3px solid #b98b57;
     color: #b98b57;
 }
-
 .hamburger{
     display: none;
-}
-
-.hamburger{
     width: 60px;
     height: 45px;
     position: relative;
@@ -72,13 +68,12 @@ header.black{
     transition: .5s ease-in-out;
     cursor: pointer;
 }
-
 .hamburger span{
     display: block;
     position: absolute;
     height: 6px;
     width: 100%;
-    background: #b98b57;
+    background: #604425;
     border-radius: 9px;
     opacity: 1;
     left: 0;
