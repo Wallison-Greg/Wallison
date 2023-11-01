@@ -1,6 +1,10 @@
 import React from 'react'
 import './ProjectList.css'
 
+//icons
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 const ProjectList = ({capa, logo, title, info, tags, deploy, git}) => {
   return (
     <li className='project'>
@@ -10,15 +14,19 @@ const ProjectList = ({capa, logo, title, info, tags, deploy, git}) => {
         <div className='project-title'>{title}</div>
         <p className='project-info'>
             {info}
-            <br/>
+            <br/><br/>
             <span>{tags}</span>
         </p>
         <div class="project-view">
             <div className='btn'>
-                <a  href={deploy} target="_blank" rel="noopener noreferrer">Deploy</a>
+                <a  href={deploy} target="_blank" rel="noopener noreferrer">
+                    <VisibilityIcon style={{marginRight: 3}}/> Deploy
+                </a>
             </div>
             <div className='btn'>
-                <a  href={git} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a  href={git} target="_blank" rel="noopener noreferrer">
+                    <GitHubIcon style={{marginRight: 3}}/> GitHub
+                </a>
             </div>
         </div>
     </li>

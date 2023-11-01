@@ -53,7 +53,7 @@ const Home = () => {
             capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
             logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
             title: 'WhatsApp Clone',
-            info: 'projeto whatsApp clone feito no curso aplicado pelo professor Bonieky Lacerda',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
             tags: 'Material icons, emoji picker, firebase, react',
             deploy: '',
             git: ''
