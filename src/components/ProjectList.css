@@ -1,0 +1,41 @@
+.project{
+    background-color: #FAF4EA;
+    border-radius: 5px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
+    color: #141414;
+}
+.cover-photo{
+    height: 160px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.logo-img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 93px 0 0 -175px;
+    border: 1px solid #B98B57;
+    padding: 7px;
+    background: #FAF4EA;
+}
+.project-title{
+    font-weight: 600;
+    margin: 27px 0 0 120px;
+}
+.project-info{
+    margin-top: 35px;
+    line-height: 21px;
+}
+.project-view{
+    display: flex;
+    justify-content: center;
+}
+.project a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}
+

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './Home.css'
 
 //icons 
@@ -6,11 +6,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 //img
-import PerfilBanner from '../../img/perfil_banner_2.png';
+import PerfilBanner from '../../img/perfil_banner.png';
 import Perfil from '../../img/perfil.jpeg';
 
 //components
 import ListSkills from '../../components/ListSkills';
+import ProjectList from '../../components/ProjectList';
 
 const Home = () => {
 
@@ -19,31 +20,43 @@ const Home = () => {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
             alt: 'react',
             title: 'React',
-            desc: 'avançado'
+            desc: 'O React é uma biblioteca front-end JavaScript popular para desenvolvimento de código aberto com foco em criar interfaces de usuário em páginas web.'
         },
         {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg",
             alt: 'node-js',
             title: 'Node.js',
-            desc: 'medio'
+            desc: 'O Node.js pode ser definido como um ambiente de execução Javascript server-side permitindo a execução de códigos fora de um navegador web.'
         },
         {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
             alt: 'express-js',
             title: 'Express',
-            desc: 'medio'
+            desc: 'O Express é um framework para aplicações web Node.js flexíveis que fornece um conjunto robusto de recursos para aplicativos web e móvel.'
         },
         {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
             alt: 'mongodb',
             title: 'MongoDB',
-            desc: 'medio'
+            desc: 'O MongoDB é um banco de dados NoSQL orientado a documentos ou seja, que não se utiliza de tabelas e colunas pré-definidas.'
         },
         {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
             alt: 'c-sharp',
             title: 'C-Sharp',
-            desc: 'medio'
+            desc: 'C-Sharp é uma linguagem de programação orientada a objetos criada pela Microsoft, sendo a principal da plataforma .NET'
+        }
+    ]
+
+    const projects = [
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto whatsApp clone feito no curso aplicado pelo professor Bonieky Lacerda',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
         }
     ]
 
@@ -128,6 +141,29 @@ const Home = () => {
                             alt={item.alt}
                             title={item.title}
                             desc={item.desc}
+                        />
+                    ))}
+                </ul>
+            </div>
+        </section>
+
+        <section className='projects'>
+            <div className='title-area'>
+                <div className='title-text'>projetos</div>
+                <div className='title-bar'></div>
+            </div>
+            <div className='projects-area'>
+                <ul>
+                    {projects.map((item, key) => (
+                        <ProjectList
+                            key={key}
+                            capa={item.capa}
+                            logo={item.logo}
+                            title={item.title}
+                            info={item.info}
+                            tags={item.tags}
+                            deploy={item.deploy}
+                            git={item.git}
                         />
                     ))}
                 </ul>
