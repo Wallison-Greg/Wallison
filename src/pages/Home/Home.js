@@ -13,6 +13,17 @@ import Perfil from '../../img/perfil.jpeg';
 import ListSkills from '../../components/ListSkills';
 import ProjectList from '../../components/ProjectList';
 
+//swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+
+//swiper style
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 const Home = () => {
 
     const skills = [
@@ -49,6 +60,24 @@ const Home = () => {
     ]
 
     const projects = [
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
         {
             capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
             logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
@@ -152,21 +181,32 @@ const Home = () => {
                 <div className='title-text'>projetos</div>
                 <div className='title-bar'></div>
             </div>
-            <div className='projects-area'>
-                <ul>
-                    {projects.map((item, key) => (
-                        <ProjectList
-                            key={key}
-                            capa={item.capa}
-                            logo={item.logo}
-                            title={item.title}
-                            info={item.info}
-                            tags={item.tags}
-                            deploy={item.deploy}
-                            git={item.git}
-                        />
-                    ))}
-                </ul>
+            <div className='projects-area'>               
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                >
+                    <ul>
+                        {projects.map((item, key) => (
+                            <SwiperSlide key={key}>
+                                <ProjectList
+                                    capa={item.capa}
+                                    logo={item.logo}
+                                    title={item.title}
+                                    info={item.info}
+                                    tags={item.tags}
+                                    deploy={item.deploy}
+                                    git={item.git}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </ul>
+                </Swiper>
             </div>
         </section>
     </main>

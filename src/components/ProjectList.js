@@ -14,7 +14,7 @@ const ProjectList = ({capa, logo, title, info, tags, deploy, git}) => {
         <div className='project-title'>{title}</div>
         <p className='project-info'>
             {info}
-            <br/><br/>
+            
             <span>{tags}</span>
         </p>
         <div class="project-view">

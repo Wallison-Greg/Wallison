@@ -1,39 +1,44 @@
 .project{
     background-color: #FAF4EA;
+    margin: 0px 30px;
     border-radius: 5px;
-    width: 350px;
+    width: 300px;
     text-align: center;
     box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
     color: #141414;
 }
 .cover-photo{
-    height: 160px;
+    height: 125px;
     width: 100%;
     border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #f5e9d5;
 }
 .logo-img{
-    height: 120px;
-    width: 120px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
-    margin: 93px 0 0 -175px;
+    margin: 85px 0 0 -205px;
     border: 1px solid #f5e9d5;
-    padding: 7px;
+    padding: 3px;
     background: #FAF4EA;
 }
 .project-title{
     font-weight: 700;
-    margin: 27px 0 0 120px;
+    margin: 10px 0 0 85px;
     text-transform: uppercase;
 }
 .project-info{
-    margin: 35px auto;
+    margin: 15px auto;
     line-height: 21px;
     color: #000000;
-    font-size: 13px;
+    font-size: 12px;
     text-align: left;
     max-width: 200px;
 }
+
 .project-info span{
+    display: block;
+    margin-top: 10px;
     font-weight: 600;
 }
 .project-view{
