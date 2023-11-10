@@ -9,13 +9,11 @@ const ProjectList = ({capa, logo, title, info, tags, deploy, git}) => {
   return (
     <li className='project'>
         <div className='cover-photo' style={{background: `url(${capa})`}}>
-            <img className='logo-img' src={logo} alt='logo'/>
+            <img className='logo-img' src={logo} alt='logo' style={{objectFit: 'cover'}}/>
         </div>
         <div className='project-title'>{title}</div>
         <p className='project-info'>
-            {info}
-            
-            <span>{tags}</span>
+            {info}<span>{tags}</span>
         </p>
         <div class="project-view">
             <div className='btn'>

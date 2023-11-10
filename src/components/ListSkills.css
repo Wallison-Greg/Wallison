@@ -17,8 +17,29 @@
 }
 .skill .desc{
     color: #e9e9e9d5;
-    font-size: 12px;
+    font-size: 0.75rem;
     max-width: 177px;
     text-align: justify;
+}
+
+@media (max-width: 895px){
+    .skill .logo{
+        height: 60px;
+    }
+    .skill .title{
+        font-size: 0.875rem;
+    }
+    .skill .desc{
+        font-size: 0.6875rem;
+    }
+}
+@media (max-width: 745px){
+    .skill{
+        margin: 15px 0;
+        border: none;
+    }
+    .skill:last-child{
+        border-right: none;
+    }
 }
 

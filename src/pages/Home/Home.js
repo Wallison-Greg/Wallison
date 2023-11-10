@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import './Home.css'
 
 //icons 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 //img
 import PerfilBanner from '../../img/perfil_banner.png';
@@ -12,17 +14,6 @@ import Perfil from '../../img/perfil.jpeg';
 //components
 import ListSkills from '../../components/ListSkills';
 import ProjectList from '../../components/ProjectList';
-
-//swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-
-//swiper style
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 
 const Home = () => {
 
@@ -86,8 +77,65 @@ const Home = () => {
             tags: 'Material icons, emoji picker, firebase, react',
             deploy: '',
             git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        }
+        ,
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
+        },
+        {
+            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
+            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
+            title: 'WhatsApp Clone',
+            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
+            tags: 'Material icons, emoji picker, firebase, react',
+            deploy: '',
+            git: ''
         }
     ]
+
+    const carousel = useRef(null);
 
     useEffect(() => {
         const titulo = document.getElementById('dev');
@@ -104,7 +152,16 @@ const Home = () => {
         }
 
         typeWrite(titulo)
-    }, [])
+    }, []);
+
+    const handleLeftClick = (e) =>{
+        e.preventDefault();
+        carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
+    const handleRightClick = (e) =>{
+        e.preventDefault();
+        carousel.current.scrollLeft += carousel.current.offsetWidth;
+    }
 
   return (
     <main>
@@ -181,20 +238,14 @@ const Home = () => {
                 <div className='title-text'>projetos</div>
                 <div className='title-bar'></div>
             </div>
-            <div className='projects-area'>               
-                <Swiper
-                    modules={[Navigation, Pagination, Scrollbar]}
-                    slidesPerView={3}
-                    navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
-                >
-                    <ul>
-                        {projects.map((item, key) => (
-                            <SwiperSlide key={key}>
+            <div class="container-projects">
+                <KeyboardArrowLeftIcon className='next-slide left' onClick={handleLeftClick}/>
+                <div class="carousel-projects" ref={carousel}>
+                    <div className='projects-area'>
+                        <ul>
+                            {projects.map((item, key) => (
                                 <ProjectList
+                                    key={key}
                                     capa={item.capa}
                                     logo={item.logo}
                                     title={item.title}
@@ -203,10 +254,11 @@ const Home = () => {
                                     deploy={item.deploy}
                                     git={item.git}
                                 />
-                            </SwiperSlide>
-                        ))}
-                    </ul>
-                </Swiper>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <KeyboardArrowRightIcon className='next-slide right' onClick={handleRightClick}/>
             </div>
         </section>
     </main>

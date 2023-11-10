@@ -39,7 +39,7 @@
     text-decoration: none;
     color: #B98B57;
     padding: 0.7em 1.4em;
-    font-size: 14px;
+    font-size: 0.875rem;
     position: relative;
     background: transparent;
     user-select: none;
@@ -113,10 +113,6 @@
     justify-content: space-evenly;
     padding: 30px 0px 50px 0px;
 }
-.about-area.perfil-img,
-.about-area.about-desc{
-    width: 45%;
-}
 .perfil-img{
     display: flex;
     justify-content: center;
@@ -133,7 +129,7 @@
 }
 .about-desc{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 23px;
 }
 .about-desc abbr{
@@ -159,6 +155,35 @@
 }
 
 /*projects*/
+.container-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-projects{
+    max-width: 80vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.projects-area{
+    padding: 0 15px;
+}
+.projects-area ul{
+    margin-bottom: 10px;
+}
+.next-slide{
+    width: auto;
+    height: auto;
+    background-color: #b98b57ad;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.container-projects .left{
+    margin-right: 15px;
+}
+.container-projects .right{
+    margin-left: 15px;
+}
 
 /*animação*/
 @keyframes banner{
@@ -175,6 +200,86 @@
 
 /*responsividade*/
 
-@media (max-width: 825px){
+@media (max-width: 895px){
+    /*banner*/
+    .banner-info h3{
+    font-size: 1.75rem;
+    }
+    .banner-info h1{
+        font-size: 2.2rem ;
+    }
+    .banner-contact a{
+        font-size: 0.75rem;
+    }
+    .banner-img img{
+        height: 250px;
+    }
+    .banner-img .sombra{
+        width: 75px;
+        height: 35px;
+    }
 
+    /*about*/
+    .perfil-img img{
+        height: 250px;
+    }
+    .about-desc{
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 745px){
+    /*banner*/
+    .banner{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .banner-info h3{
+        font-size: 1.25rem;
+    }
+    .banner-info h1{
+        font-size: 1.75rem;
+    }
+    .banner-info{
+        padding: 15px;
+    }
+    .banner-img img{
+        height: 200px;
+        margin: 100px 0 20px 0;
+    }
+    .banner-img .sombra{
+        display: none;
+    }
+
+    /*about*/
+    .about-area{
+        flex-direction: column;
+        padding: 0;
+    }
+    .perfil-img img{
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    .about-desc{
+        width: 80vw;
+    }
+
+    /*skills*/
+    .skills-area ul{
+        flex-direction: column;
+    }
+    
+    /*projects*/
+    .container-projects .left{
+        margin-right: 10px;
+    }
+    .container-projects .right{
+        margin-left: 10px;
+    }
+    .carousel-projects{
+        max-width: 70vw;
+    }
+    .projects-area{
+        padding: 0;
+    }
 }
