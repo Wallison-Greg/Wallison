@@ -5,19 +5,23 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+//router
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
 //pages
 import Home from './pages/Home/Home';
+import AddProjects from './pages/AddProjects/AddProjects';
 
 function App() {
 
   const [blackHeader, setBlackHeader] = useState(false);
   const [height, setHeight] = useState({sizeHeight: window.innerHeight});
 
-  const detectSize = () => {
+  const detectSize = () => { 
     setHeight({sizeHeight: window.innerHeight})
   }
 
-  useEffect(() => {
+  useEffect(() => { //pegando o tamanho da tela
     window.addEventListener('resize', detectSize)
 
     return () => {
@@ -45,9 +49,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header black={blackHeader}/>
-      <Home/>
-      <Footer />
+      <BrowserRouter>
+        <Header black={blackHeader}/>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/projects' element={<AddProjects/>} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

@@ -137,6 +137,18 @@ const Home = () => {
 
     const carousel = useRef(null);
 
+    const observer = new IntersectionObserver( entries => {
+        Array.from(entries).forEach(entry => {
+            entry.target.classList.add('init-hidden-off')
+        })
+    }, {
+        threshold: .5
+    })
+
+    Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
+        observer.observe(element)
+    })
+
     useEffect(() => {
         const titulo = document.getElementById('dev');
 
@@ -213,7 +225,7 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='skills'>
+        <section className='skills init-hidden'>
             <div className='title-area'>
                 <div className='title-text'>habilidades</div>
                 <div className='title-bar'></div>
@@ -233,7 +245,7 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='projects'>
+        <section className='projects init-hidden'>
             <div className='title-area'>
                 <div className='title-text'>projetos</div>
                 <div className='title-bar'></div>

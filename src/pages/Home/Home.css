@@ -185,6 +185,15 @@
     margin-left: 15px;
 }
 
+/*carregamento*/
+.init-hidden{
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+.init-hidden-off{
+    opacity: 1;
+}
+
 /*animação*/
 @keyframes banner{
     0%{
