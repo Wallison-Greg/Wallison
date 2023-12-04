@@ -1,0 +1,45 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about .header-color{
+    height: 100px;
+    width: 100vw;
+    background-color: #141414;
+}
+.about .title-area{
+    margin: 35px 0px;
+}
+.about-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 35px 0px 69px 0px;
+}
+.perfil-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil-img img{
+    height: 230px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow:  0px 0px 12px 2px #c5c5c5;
+}
+.perfil-img, .about-desc{
+    width: 40vw;
+}
+.about-desc{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+}
+.about-desc abbr{
+    text-decoration: none;
+}
+.about-desc strong{
+    font-weight: 600;
+}

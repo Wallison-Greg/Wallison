@@ -48,16 +48,11 @@ header.black{
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    color: #ffff;
+    color: #ffffff;
 }
-
 .menu a:hover{
-    border-bottom: 3px solid #141414;
-    color: #141414;
-}
-.black .menu a:hover{
-    border-bottom: 3px solid #b98b57;
-    color: #b98b57;
+    border-bottom: 3px solid #91683a;
+    color: #91683a;
 }
 .hamburger{
     display: none;

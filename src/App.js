@@ -11,6 +11,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 //pages
 import Home from './pages/Home/Home';
 import AddProjects from './pages/AddProjects/AddProjects';
+import About from './pages/About/About';
+import Skills from './pages/Skills/Skills';
 
 function App() {
 
@@ -54,6 +56,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/projects' element={<AddProjects/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/skills' element={<Skills/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

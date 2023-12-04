@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Header.css'
-
+import { NavLink } from 'react-router-dom'
 import Logo from '../img/logo_2.png'
 
 const Header = ({black}) => {
@@ -14,9 +14,9 @@ const Header = ({black}) => {
   return (
     <header className={black ? "black" : ""}>
         <div className='logo'>
-            <a href='/'>
+            <NavLink to='/'>
                 <img src={Logo} alt='logo'/>
-            </a>
+            </NavLink>
         </div>
         <div className='menu-area'>
             <div 
@@ -31,19 +31,19 @@ const Header = ({black}) => {
             <nav className={active ? 'menu close' : 'menu'}>
                 <ul>
                     <li>
-                        <a href='#'>Inicio</a>
+                        <NavLink to='/'>Inicio</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Sobre Mim</a>
+                        <NavLink to='/about'>Sobre Mim</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Habilidades</a>
+                        <NavLink to='/skills'>Habilidades</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Projetos</a>
+                        <NavLink to='#'>Novo Projeto</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Contato</a>
+                        <NavLink to='#'>Contato</NavLink>
                     </li>
                 </ul>
             </nav>

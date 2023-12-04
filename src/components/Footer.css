@@ -1,13 +1,14 @@
 .footer {
-    height: 150px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #141414;
+    border-top: 1px solid #c4c4c48e;
 }
 .contact{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .footer p{
   color: #B98B57;
