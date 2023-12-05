@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 //img
-import PerfilBanner from '../../img/perfil_banner.png';
+import PerfilBanner from '../../assets/img/perfil_banner.png';
 
 //components
 import TitleSection from '../../components/TitleSection';
@@ -171,19 +171,21 @@ const Home = () => {
                                 <img src={item.capa} alt='logo'/>
                             </div>
                             <div className='proj-desc'>
-                                <h2 className='proj-title'>{item.title}</h2>
-                                <p className='proj-info'>{item.info}</p>
-                                <p className='proj-skills'>{item.tags}</p>
-                                <div className='proj-links'>
-                                    <div className='btn'>
-                                        <a  href={item.deploy} target="_blank" rel="noopener noreferrer">
-                                            <VisibilityIcon style={{marginRight: 3}}/> Deploy
-                                        </a>
-                                    </div>
-                                    <div className='btn'>
-                                        <a  href={item.git} target="_blank" rel="noopener noreferrer">
-                                            <GitHubIcon style={{marginRight: 3}}/> GitHub
-                                        </a>
+                                <div class="desc-area">
+                                    <h2 className='proj-title'>{item.title}</h2>
+                                    <p className='proj-info'>{item.info}</p>
+                                    <p className='proj-skills'>{item.tags}</p>
+                                    <div className='proj-links'>
+                                        <div className='btn'>
+                                            <a  href={item.deploy} target="_blank" rel="noopener noreferrer">
+                                                <VisibilityIcon style={{marginRight: 3}}/> Deploy
+                                            </a>
+                                        </div>
+                                        <div className='btn'>
+                                            <a  href={item.git} target="_blank" rel="noopener noreferrer">
+                                                <GitHubIcon style={{marginRight: 3}}/> GitHub
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

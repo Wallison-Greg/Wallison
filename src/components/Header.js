@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
-import Logo from '../img/logo_2.png'
+import Logo from '../assets/img/logo_2.png'
 
 const Header = ({black}) => {
 

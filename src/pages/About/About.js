@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 
 //img
-import Perfil from '../../img/perfil.jpeg';
+import Perfil from '../../assets/img/perfil.jpeg';
 
 //components
 import TitleSection from '../../components/TitleSection';
