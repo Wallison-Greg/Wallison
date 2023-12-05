@@ -166,7 +166,7 @@ const Home = () => {
             <div className='projects-area'>
                 <ul>
                     {projects.map((item, key) => (
-                        <li className={key % 2 === 0 ? 'project' : 'project project-right'}>
+                        <li key={key} className={key % 2 === 0 ? 'project' : 'project project-right'}>
                             <div className='proj-logo'>
                                 <img src={item.capa} alt='logo'/>
                             </div>

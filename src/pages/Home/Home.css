@@ -128,7 +128,7 @@
     flex-direction: row-reverse;
 }
 .proj-logo, .proj-desc{
-    width: 40vw;
+    width: 45vw;
 }
 .proj-logo{
     display: flex;
@@ -203,8 +203,12 @@
 
 /*responsividade*/
 
+@media (max-width: 1005px){
+    .proj-logo img{
+        height: 250px;
+    }
+}
 @media (max-width: 895px){
-    /*banner*/
     .banner-info h3{
     font-size: 1.75rem;
     }
@@ -221,19 +225,20 @@
         width: 75px;
         height: 35px;
     }
+}
+@media (max-width: 830px){
+    .project, .project-right{
+        flex-direction: column;
+        margin: 30px 0px;
+    }
+    .proj-logo{
+        margin-bottom: 30px;
+    }
 
-    /*about*/
-    .perfil-img img{
-        height: 250px;
-    }
-    .about-desc{
-        font-size: 0.875rem;
-    }
 }
 
 @media (max-width: 745px){
-    /*banner*/
-    .banner{
+    .banner-sombra{
         flex-direction: column-reverse;
         justify-content: center;
     }
@@ -253,36 +258,5 @@
     .banner-img .sombra{
         display: none;
     }
-
-    /*about*/
-    .about-area{
-        flex-direction: column;
-        padding: 0;
-    }
-    .perfil-img img{
-        height: 150px;
-        margin-bottom: 15px;
-    }
-    .about-desc{
-        width: 80vw;
-    }
-
-    /*skills*/
-    .skills-area ul{
-        flex-direction: column;
-    }
-    
-    /*projects*/
-    .container-projects .left{
-        margin-right: 10px;
-    }
-    .container-projects .right{
-        margin-left: 10px;
-    }
-    .carousel-projects{
-        max-width: 70vw;
-    }
-    .projects-area{
-        padding: 0;
-    }
 }
+

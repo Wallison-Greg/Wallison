@@ -63,4 +63,7 @@
     .skill:last-child{
         border-right: none;
     }
+    .skills-area ul{
+        flex-direction: column;
+    }
 }
