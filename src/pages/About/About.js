@@ -10,7 +10,6 @@ import TitleSection from '../../components/TitleSection';
 const About = () => {
   return (
     <section className='about'>
-        <div className='header-color'></div>
         <TitleSection title='sobre mim'/>
         <div className='about-area'>
             <div className='perfil-img'>

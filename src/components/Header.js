@@ -40,7 +40,7 @@ const Header = ({black}) => {
                         <NavLink to='/skills'>Habilidades</NavLink>
                     </li>
                     <li>
-                        <NavLink to='#'>Novo Projeto</NavLink>
+                        <NavLink to='/projects'>Novo Projeto</NavLink>
                     </li>
                     <li>
                         <NavLink to='#'>Contato</NavLink>

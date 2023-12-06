@@ -1,0 +1,44 @@
+.add-project{
+    text-align: center;
+    margin-top: 130px;
+}
+.add-project p{
+    color: #aaa;
+    margin-bottom: 30px;
+}
+input::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  color: #aaa;
+}
+input:focus{
+  outline: none;
+}
+form{
+    max-width: 40%;
+    margin: 0 auto;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+}
+label span{
+    margin-bottom: .3em;
+    font-weight: 600;
+    text-align: left;
+}
+input{
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    padding: .8em 0;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 5px;
+    border-radius: 5px;
+}

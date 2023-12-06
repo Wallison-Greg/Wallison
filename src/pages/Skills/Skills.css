@@ -6,11 +6,9 @@
     justify-content: center;
     align-items: center;
 }
+/*talvez  retirar trecho de codigo */
 .skills .title-area{
     margin: 140px 0px 20px 0px;
-}
-.skills .title-text{
-    color: #ffff;
 }
 
 .skills-area ul, .projects-area ul{
