@@ -4,6 +4,9 @@ import './AddProjects.css'
 //hooks
 import { useState, useEffect } from 'react'
 
+//icons
+import SendIcon from '@mui/icons-material/Send';
+
 const AddProjects = () => {
   return (
     <div className='add-project'>
@@ -34,7 +37,9 @@ const AddProjects = () => {
           <span>GitHub:</span>
           <input type='text' placeholder='URL do github' required name='git' />
         </label>
-        <button className='btn'>Enviar</button>
+        <button className='btn' style={{fontWeight: 'bold'}}>
+          <SendIcon style={{marginRight: 3}}/> Enviar
+        </button>
       </form>
     </div>
   )

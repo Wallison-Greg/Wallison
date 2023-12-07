@@ -1,14 +1,13 @@
 .skills{
-    background-color: #141414;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-/*talvez  retirar trecho de codigo */
+
 .skills .title-area{
-    margin: 140px 0px 20px 0px;
+    margin: 150px 0px 20px 0px;
 }
 
 .skills-area ul, .projects-area ul{
@@ -29,17 +28,22 @@
     border-right: 1px solid #B98B57;
 }
 .skill .title{
-    margin: 20px 0px 30px 0px;
+    margin: 20px 0px 5px 0px;
     font-weight: 600;
 }
 .skill .title-marc{
     color: #B98B57;
 }
-.skill .desc{
+.skill .desc, .skill .lvl{
     color: #e9e9e9d5;
     font-size: 0.75rem;
-    max-width: 177px;
+}
+.skill .desc{
     text-align: justify;
+    max-width: 177px;
+}
+.skill .lvl{
+    margin-bottom: 20px;
 }
 
 @media (max-width: 895px){
