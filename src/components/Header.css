@@ -102,6 +102,79 @@ header.black{
     left: 50%;
 }
 
+/*teste*/
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-dropdown{
+    cursor: pointer;
+    padding: 0 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-dropdown{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-right: 5px;
+    color: #ffffff;
+}
+.perfil-dropdown{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.menu-dropdown:hover{
+    border-bottom: 3px solid #91683a;
+}
+.title-dropdown:hover{
+    color: #91683a;
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 250px;
+    margin-top: 2px;
+}
+.acount{
+    padding: 15px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #91683a;
+    background-color: #141414a6;
+}
+.acount .login{
+    max-width: 90%;
+}
+.acount .contact{
+    display: flex;
+    margin: 0;
+}
+.acount h1{
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+.contact .icon{
+    height: auto;
+}
+.contact .icon:hover{
+    border: none;
+}
+
 @media (max-width: 745px){
     /*menu responsivo*/
 
