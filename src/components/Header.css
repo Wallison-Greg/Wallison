@@ -138,6 +138,9 @@ header.black{
 .title-dropdown:hover{
     color: #91683a;
 }
+.acount-open{
+    display: initial !important;
+}
 .sub-menu{
     display: none;
     position: absolute;
@@ -164,6 +167,7 @@ header.black{
 }
 .acount h1{
     text-transform: uppercase;
+    text-align: center;
     font-size: 0.75rem;
     color: #ffffff;
     margin: 10px 0;
@@ -174,6 +178,21 @@ header.black{
 .contact .icon:hover{
     border: none;
 }
+.contact .icon:nth-child(1):hover{
+    color: #000;
+}
+.contact .icon:nth-child(2):hover{
+    color: #008000 ; 
+}
+.contact .icon:nth-child(3):hover{
+    color: #0e76a8 ; 
+}
+.acount .linha {
+    width: 90%;
+    height: 1px;
+    background-color: #CCC;
+}
+
 
 @media (max-width: 745px){
     /*menu responsivo*/
@@ -217,10 +236,42 @@ header.black{
     .close ul {
         display: flex;
     }
+    /*menu drop-down*/
+    .dropdown{
+        align-items: flex-start;
+    }
+    .menu-dropdown{
+        height: 60px;
+        flex-direction: row-reverse;
+        margin-left: 40px;
+    }
+    .menu-dropdown .title-dropdown{
+        font-size: 0.938rem;
+        margin-left: 5px;
+    }
+    .sub-menu{
+        top: 50%;
+        margin-left: 50px;
+    }
+    .contact .icon{
+        margin: 10px;
+    }
+    .menu-dropdown:hover{
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 642px){
     .menu-area .hamburger{
         margin-left: 50vw;
+    }
+    .menu ul{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 428px){
+    .menu ul{
+        width: 100vw;
     }
 }

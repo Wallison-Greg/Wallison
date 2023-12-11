@@ -1,25 +1,15 @@
 .footer {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 50px;
+    
     background-color: #141414;
     border-top: 1px solid #c4c4c48e;
 }
-.contact{
-  margin-bottom: 15px;
-}
+
 .footer p{
   color: #B98B57;
   font-size: 0.8125rem;
   font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
 }
-.icon{
-  margin: 0px 8px;
-  text-decoration: none;
-  color: #adadad;
-}
-.icon:hover{
-  color: #B98B57;
-}
+

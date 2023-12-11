@@ -11,9 +11,14 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const Header = ({black}) => {
 
     const [active, seActive] = useState(false);
+    const [acountActive, seAcountActive] = useState(false);
 
     const menuMode = () => {
         seActive(!active);
+    }
+    const subMenuMode = () => {
+        seAcountActive(!acountActive);
+        console.log(acountActive)
     }
 
   return (
@@ -47,14 +52,14 @@ const Header = ({black}) => {
                     <li>
                         <NavLink to='/projects'>Novo Projeto</NavLink>
                     </li>
-                    <li className='dropdown'>
-                        <div class="menu-dropdown">
+                    <li className='dropdown' onClick={subMenuMode}>
+                        <div className="menu-dropdown">
                             <div className='title-dropdown'>Contato</div>
                             <div className='perfil-dropdown'></div>
                         </div>
-                        <div className='sub-menu'>
+                        <div className={acountActive ? 'acount-open sub-menu' : 'sub-menu'}>
                             <div class="acount">
-                                <h1 style={{textAlign: 'center'}}>Contato</h1>
+                                <h1>Contato</h1>
                                 <div className='contact'>
                                     <a className='icon' href='https://github.com/Wallison-Greg' target="_blank" rel="noopener noreferrer">
                                         <GitHubIcon />
@@ -66,9 +71,9 @@ const Header = ({black}) => {
                                         <LinkedInIcon />
                                     </a>
                                 </div>
-                                <hr style={{width: 230}}/>
+                                <div className='linha'></div>
                                 <form className='login'>
-                                    <h1 style={{textAlign: 'center'}}>Login</h1>
+                                    <h1>Login</h1>
                                     <label>
                                         <span>E-mail:</span>
                                         <input type='text' placeholder='E-mail' required name='email' />
