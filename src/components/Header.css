@@ -220,7 +220,7 @@ header.black{
     }
     .menu ul:first-child{
         margin-top: 2px;
-        padding-top: 50px;
+        padding-top: 10px;
     }
     .menu a{
         border-bottom: none;
@@ -250,7 +250,7 @@ header.black{
         margin-left: 5px;
     }
     .sub-menu{
-        top: 50%;
+        top: 40%;
         margin-left: 50px;
     }
     .contact .icon{
