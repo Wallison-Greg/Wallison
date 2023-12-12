@@ -1,12 +1,19 @@
 import './App.css';
+
+//hooks
 import { useEffect, useState } from 'react';
+import { useAuthentication } from './hooks/useAuthentication';
 
 //components
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-//router
+//context
+import { AuthProvider } from './context/AuthContext';
+
+//router / firebase
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { onAuthStateChanged} from 'firebase/auth';
 
 //pages
 import Home from './pages/Home/Home';
@@ -18,6 +25,16 @@ function App() {
 
   const [blackHeader, setBlackHeader] = useState(false);
   const [height, setHeight] = useState({sizeHeight: window.innerHeight});
+  const [user, setUser] = useState(undefined);
+  const {auth} = useAuthentication();
+
+  const loadingUser = user === undefined;
+
+  useEffect(() => { //gerenciando a autenticação
+    onAuthStateChanged(auth, (user) => {
+      setUser(user)
+    })
+  }, [auth]);
 
   const detectSize = () => { 
     setHeight({sizeHeight: window.innerHeight})
@@ -30,7 +47,7 @@ function App() {
       window.removeEventListener('resize', detectSize)
     }
 
-  }, [height])
+  }, [height]);
 
   useEffect(() => { //cabeçalho movel 
     const scrollListener = () =>{
@@ -47,20 +64,26 @@ function App() {
     return () => {
       window.removeEventListener('scroll', scrollListener);
     }
-  }, [height.sizeHeight])
+  }, [height.sizeHeight]);
+
+  if(loadingUser){
+    return <p>Carregando...</p>
+  }
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header black={blackHeader}/>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/projects' element={<AddProjects/>} />
-          <Route path='/about' element={<About/>} />
-          <Route path='/skills' element={<Skills/>} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <AuthProvider value={{user}}>
+        <BrowserRouter>
+          <Header black={blackHeader}/>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/projects' element={user ? <AddProjects/> : <Navigate to='/'/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/skills' element={<Skills/>} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

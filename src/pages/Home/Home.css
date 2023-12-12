@@ -186,7 +186,8 @@
 .proj-title{
     margin-bottom: 30px;
     text-align: center;
-    color: #fff
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000ce;
 }
 
 /*botão projetos*/

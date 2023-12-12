@@ -102,7 +102,7 @@ header.black{
     left: 50%;
 }
 
-/*teste*/
+/*menu dropdown*/
 .dropdown{
     display: flex;
     flex-direction: column;
@@ -126,11 +126,16 @@ header.black{
     margin-right: 5px;
     color: #ffffff;
 }
-.perfil-dropdown{
+.dropdown-img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #ffffff;
+}
+.perfil-dropdown{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .menu-dropdown:hover{
     border-bottom: 3px solid #91683a;
@@ -160,6 +165,15 @@ header.black{
 }
 .acount .login{
     max-width: 90%;
+}
+.acount .btn{
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: 2px 2px 4px #141414c7;
+    margin: 0;
+    width: 6em;
+    height: 2.2em;
+    cursor: pointer;
 }
 .acount .contact{
     display: flex;
