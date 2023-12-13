@@ -12,92 +12,12 @@ import PerfilBanner from '../../assets/img/perfil_banner.png';
 //components
 import TitleSection from '../../components/TitleSection';
 
+//hooks
+import { useFetchDocuments } from '../../hooks/useFetchDocuments';
+
 const Home = () => {
 
-    const projects = [
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        }
-        ,
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        },
-        {
-            capa: 'https://img.freepik.com/vetores-premium/bate-papo-de-bolhas-de-fala-para-whatsapp_300191-833.jpg',
-            logo: 'https://logospng.org/download/whatsapp/logo-whatsapp-256.png',
-            title: 'WhatsApp Clone',
-            info: 'projeto react whatsApp clone aplicado pelo professor Bonieky Lacerda, tem como objetivo recriar as funcionalidades basicas do whatsApp',
-            tags: 'Material icons, emoji picker, firebase, react',
-            deploy: '',
-            git: ''
-        }
-    ]
+    const {documents: projects, loading} = useFetchDocuments('projects')
 
     const observer = new IntersectionObserver( entries => {
         Array.from(entries).forEach(entry => {
@@ -162,10 +82,11 @@ const Home = () => {
         </section>
 
         <section className='projects'>
+            {loading && <p>Carregando...</p>}
             <TitleSection title='projetos'/>
             <div className='projects-area'>
                 <ul>
-                    {projects.map((item, key) => (
+                    {projects && projects.map((item, key) => (
                         <li key={key} className={key % 2 === 0 ? 'project' : 'project project-right'}>
                             <div className='proj-logo'>
                                 <img src={item.capa} alt='logo'/>
@@ -174,7 +95,7 @@ const Home = () => {
                                 <div class="desc-area">
                                     <h2 className='proj-title'>{item.title}</h2>
                                     <p className='proj-info'>{item.info}</p>
-                                    <p className='proj-skills'>{item.tags}</p>
+                                    <p className='proj-skills'>{item.skills}</p>
                                     <div className='proj-links'>
                                         <div className='btn'>
                                             <a  href={item.deploy} target="_blank" rel="noopener noreferrer">

@@ -5,13 +5,14 @@ import './AddProjects.css'
 import { useState, useEffect } from 'react'
 import { useAuthValue } from '../../context/AuthContext';
 import { useInsertDocument } from '../../hooks/useInsertDocument';
+import { useNavigate } from 'react-router-dom';
 
 //icons
 import SendIcon from '@mui/icons-material/Send';
 
 const AddProjects = () => {
 
-  const [image, setImage] = useState("");
+  const [capa, setCapa] = useState("");
   const [title, setTitle] = useState("");
   const [info, setInfo] = useState("");
   const [skills, setSkills] = useState("");
@@ -23,19 +24,31 @@ const AddProjects = () => {
 
   const {insertDocument, response} = useInsertDocument("projects");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setProjectError("");
 
     //validando a url da imagem 
-
+    try {
+      new URL(capa);
+    } catch (error) {
+      setProjectError("A imagem precisa ser uma Url")
+    }
 
 
     //checando todos os valores do formulario
 
+    if(!title || !capa || !info || !skills || !deploy || !git){
+      setProjectError("Preencha todos os campos")
+    }
+
+    if(projectError) return; //para o envio do formulario caso haja algum erro 
+
     insertDocument({
-      image,
+      capa,
       title,
       info,
       skills,
@@ -43,6 +56,9 @@ const AddProjects = () => {
       git,
       uid: user.uid
     })
+
+    //redirect
+    navigate("/")
   }
 
   return (
@@ -56,8 +72,8 @@ const AddProjects = () => {
             type='text' 
             placeholder='URL da capa do projeto' 
             required name='capa' 
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
+            value={capa}
+            onChange={(e) => setCapa(e.target.value)}
           />
         </label>
         <label>
@@ -113,7 +129,8 @@ const AddProjects = () => {
         <button className='btn' style={{fontWeight: 'bold'}}>
           <SendIcon style={{marginRight: 3}}/> Enviar
         </button>
-        {response.projectError && <p className='error'>{response.projectError}</p>}
+        {response.error && <p className='error'>{response.error}</p>}
+        {projectError && <p className='error'>{projectError}</p>}
       </form>
     </div>
   )

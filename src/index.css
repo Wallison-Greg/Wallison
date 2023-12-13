@@ -7,6 +7,12 @@
 body{
   background-color: #181a1b;
 }
+.error{
+  background-color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 5px;
+  border-radius: 5px;
+}
 
 /*formatando a barra de rolagem*/
 ::-webkit-scrollbar{

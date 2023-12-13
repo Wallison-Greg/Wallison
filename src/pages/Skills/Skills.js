@@ -4,7 +4,12 @@ import './Skills.css'
 //components
 import TitleSection from '../../components/TitleSection'
 
+//hooks
+import { useFetchDocuments } from '../../hooks/useFetchDocuments';
+
 const Skills = () => {
+
+    const {documents: skills, loading} = useFetchDocuments('skills');
 
     const skillsList = [
         {
@@ -47,13 +52,14 @@ const Skills = () => {
 
   return (
         <section className='skills'>
+            {loading && <p>Carregando...</p>}
             <TitleSection title='habilidades'/>
             <div className='skills-area'>
                 <ul>
                     {skillsList.map((item, key) => (
                         <li className='skill' key={key}>
                             <div className='logo'>
-                                <img src={item.src} alt={item.alt} />
+                                <img src={new URL(item.src)} alt={item.alt} />
                             </div>
                             <div className='title'>{item.title}</div>
                             <div className='lvl'>{item.nivel}</div>

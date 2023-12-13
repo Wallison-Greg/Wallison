@@ -130,6 +130,7 @@ const Header = ({black}) => {
                                         <button className='btn'>
                                             Entrar
                                         </button>
+                                        {error && <p className='error'>{error}</p>}
                                     </form>
                                 )}
                                 {user && (
@@ -148,7 +149,3 @@ const Header = ({black}) => {
 }
 
 export default Header
-
-/*
-<NavLink to='#'>Contato</NavLink>
-*/
