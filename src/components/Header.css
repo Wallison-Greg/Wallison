@@ -24,6 +24,7 @@ header.black{
 
 .logo img{
     height: 100%;
+    filter: drop-shadow(2px 2px 2px #141414);
 }
 
 .menu-area{
@@ -126,16 +127,15 @@ header.black{
     margin-right: 5px;
     color: #ffffff;
 }
-.dropdown-img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff;
-}
 .perfil-dropdown{
     height: 100%;
     display: flex;
     align-items: center;
+}
+.perfil-dropdown img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 .menu-dropdown:hover{
     border-bottom: 3px solid #91683a;

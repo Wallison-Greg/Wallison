@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
+
+//img
 import Logo from '../assets/img/logo_2.png'
+import LoginImg from '../assets/img/login_img.png'
 
 //icons 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -87,7 +90,9 @@ const Header = ({black}) => {
                     <li className='dropdown'>
                         <div className="menu-dropdown" onClick={subMenuMode}>
                             <div className='title-dropdown'>Contato</div>
-                            <div className='perfil-dropdown'><div className='dropdown-img'></div></div>
+                            <div className='perfil-dropdown'>
+                                <img src={LoginImg} alt='login img'/>
+                            </div>
                         </div>
                         <div className={acountActive ? 'acount-open sub-menu' : 'sub-menu'}>
                             <div class="acount">
@@ -149,3 +154,5 @@ const Header = ({black}) => {
 }
 
 export default Header
+
+/* <div className='dropdown-img'></div> */

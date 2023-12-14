@@ -141,7 +141,7 @@
 }
 .proj-logo img{
     height: 300px;
-    max-width: 450px;
+    width: 450px;
     object-fit: cover;
     border-radius: 25px;
     box-shadow: 0 10px 20px -8px #000000;
@@ -253,7 +253,7 @@
 @media (max-width: 1005px){
     .proj-logo img{
         height: 250px;
-        max-width: 350px;
+        width: 350px;
     }
 }
 @media (max-width: 895px){
@@ -321,6 +321,6 @@
 @media (max-width: 430px){
     .proj-logo img{
         height: 200px;
-        max-width: 300px;
+        width: 300px;
     }
 }
