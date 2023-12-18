@@ -60,7 +60,7 @@ const Home = () => {
                             <GitHubIcon style={{marginRight: 3}}/> GitHub <span></span>
                         </a>
                         <a
-                            href='www.linkedin.com/in/wallison-greg'
+                            href='https://www.linkedin.com/in/wallison-greg/'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
