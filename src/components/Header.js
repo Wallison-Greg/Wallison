@@ -115,7 +115,7 @@ const Header = ({black}) => {
                                     <a className='icon' href='https://wa.me/5562999769017' target="_blank" rel="noopener noreferrer">
                                         <WhatsAppIcon />
                                     </a>
-                                    <a className='icon' href='https://www.linkedin.com/in/wallison-gregorio-ba23a922b/' target="_blank" rel="noopener noreferrer">
+                                    <a className='icon' href='www.linkedin.com/in/wallison-greg' target="_blank" rel="noopener noreferrer">
                                         <LinkedInIcon />
                                     </a>
                                 </div>
