@@ -52,7 +52,7 @@ const Header = ({black}) => {
         if(acountActive){
             setTimeout(() => {
                 setAcountActive(!acountActive);
-            }, 30000)
+            }, 20000)
         }
 
     })
