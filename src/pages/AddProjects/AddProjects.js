@@ -2,7 +2,7 @@ import React from 'react'
 import './AddProjects.css'
 
 //hooks
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { useAuthValue } from '../../context/AuthContext';
 import { useInsertDocument } from '../../hooks/useInsertDocument';
 import { useNavigate } from 'react-router-dom';

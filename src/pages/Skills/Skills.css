@@ -14,6 +14,10 @@
     list-style: none;
     display: flex;
 }
+.skills-area ul:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+}
 .skill{
     margin: 30px 0px 40px 0px;
     padding: 20px 30px;
@@ -23,6 +27,7 @@
     align-items: center;
     border-left: 1px solid #B98B57;
     color: #ffff;
+    transition: .35s;
 }
 .skill:last-child{
     border-right: 1px solid #B98B57;

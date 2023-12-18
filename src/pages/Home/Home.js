@@ -15,21 +15,12 @@ import TitleSection from '../../components/TitleSection';
 //hooks
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
+//scrollreveal
+import ScrollReveal from 'scrollreveal';
+
 const Home = () => {
 
     const {documents: projects, loading} = useFetchDocuments('projects')
-
-    const observer = new IntersectionObserver( entries => {
-        Array.from(entries).forEach(entry => {
-            entry.target.classList.add('init-hidden-off')
-        })
-    }, {
-        threshold: .5
-    })
-
-    Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
-        observer.observe(element)
-    })
 
     useEffect(() => {
         const titulo = document.getElementById('dev');
@@ -47,6 +38,9 @@ const Home = () => {
 
         typeWrite(titulo)
     }, []);
+
+    //animando o elemento com o scroll da pagina 
+    ScrollReveal().reveal('.project', { duration: 1000, reset: true });
 
   return (
     <main>

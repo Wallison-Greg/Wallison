@@ -22,8 +22,8 @@ const Header = ({black}) => {
     const {user} = useAuthValue();
     const {logout, login, error: authError} = useAuthentication();
 
-    const [active, seActive] = useState(false);
-    const [acountActive, seAcountActive] = useState(false);
+    const [active, setActive] = useState(false);
+    const [acountActive, setAcountActive] = useState(false);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -45,14 +45,25 @@ const Header = ({black}) => {
         if(authError){
             setError(authError)
         }
-    }, [authError])
+    }, [authError]);
+
+    useEffect(() => {
+
+        if(acountActive){
+            setTimeout(() => {
+                setAcountActive(!acountActive);
+            }, 30000)
+        }
+
+    })
 
     const menuMode = () => {
-        seActive(!active);
-    }
+        setActive(!active);
+    };
+
     const subMenuMode = () => {
-        seAcountActive(!acountActive);
-    }
+        setAcountActive(!acountActive);
+    };
 
   return (
     <header className={black ? "black" : ""}>
@@ -154,5 +165,3 @@ const Header = ({black}) => {
 }
 
 export default Header
-
-/* <div className='dropdown-img'></div> */
