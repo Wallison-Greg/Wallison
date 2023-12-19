@@ -20,6 +20,7 @@ import Home from './pages/Home/Home';
 import AddProjects from './pages/AddProjects/AddProjects';
 import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
 
@@ -80,6 +81,7 @@ function App() {
             <Route path='/projects' element={user ? <AddProjects/> : <Navigate to='/'/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/skills' element={<Skills/>} />
+            <Route path='/notfound' element={<NotFound/>} />
           </Routes>
           <Footer />
         </BrowserRouter>
