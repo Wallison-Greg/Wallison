@@ -15,9 +15,6 @@ import TitleSection from '../../components/TitleSection';
 //hooks
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
-//scrollreveal
-import ScrollReveal from 'scrollreveal';
-
 const Home = () => {
 
     const {documents: projects, loading} = useFetchDocuments('projects')
@@ -38,9 +35,6 @@ const Home = () => {
 
         typeWrite(titulo)
     }, []);
-
-    //animando o elemento com o scroll da pagina 
-    ScrollReveal().reveal('.project', { duration: 1000, reset: true });
 
   return (
     <main>
