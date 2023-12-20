@@ -135,7 +135,7 @@
     flex-direction: row-reverse;
 }
 .proj-logo, .proj-desc{
-    width: 45vw;
+    width: 35vw;
 }
 .proj-logo{
     display: flex;
@@ -144,7 +144,7 @@
 }
 .proj-logo img{
     height: 300px;
-    width: 450px;
+    width: 350px;
     object-fit: cover;
     border-radius: 25px;
     box-shadow: 0 10px 20px -8px #000000;
@@ -165,17 +165,12 @@
 }
 .proj-desc{
     display: flex;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
 }
 .proj-desc .desc-area{
     max-width: 350px;
 }
-
-.project-right .proj-desc{
-    justify-content: flex-end;
-}
-
 .desc-area p{
     line-height: 21px;
     font-size: 0.8rem;
@@ -229,15 +224,6 @@
     width: 9em;
 }
 
-/*carregamento*/
-.init-hidden{
-    opacity: 0;
-    transition: opacity 1s linear;
-}
-.init-hidden-off{
-    opacity: 1;
-}
-
 /*animação*/
 @keyframes banner{
     0%{
@@ -254,9 +240,8 @@
 /*responsividade*/
 
 @media (max-width: 1005px){
-    .proj-logo img{
-        height: 250px;
-        width: 350px;
+    .proj-logo, .proj-desc{
+        width: 40vw;
     }
 }
 @media (max-width: 895px){
@@ -277,12 +262,7 @@
         height: 35px;
     }
 
-    /*botão projetos*/
-    .btn{
-        font-size: 0.75rem;
-        }
-}
-@media (max-width: 830px){
+    /*projetos*/
     .project, .project-right{
         flex-direction: column;
         margin: 30px 0px;
@@ -290,7 +270,12 @@
     .proj-logo{
         margin-bottom: 30px;
     }
-
+    .proj-logo, .proj-desc{
+        width: 60vw;
+    }
+    .btn{
+        font-size: 0.75rem;
+        }
 }
 
 @media (max-width: 745px){
@@ -315,10 +300,6 @@
     }
     .proj-logo, .proj-desc{
         width: 80vw;
-        justify-content: center;
-    }
-    .project-right .proj-desc{
-        justify-content: center;
     }
 }
 @media (max-width: 430px){
