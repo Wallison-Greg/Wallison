@@ -292,4 +292,7 @@ header{
     .menu ul{
         width: 100vw;
     }
+    .menu-area .hamburger{
+        margin-left: 25vw;
+    }
 }
