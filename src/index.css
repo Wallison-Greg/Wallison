@@ -5,7 +5,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 body{
-  background-color: #181a1b;
+  background-color: #fff;
+}
+.container{
+  max-width: 80%;
 }
 .error{
   background-color: #721c24;
@@ -20,7 +23,6 @@ body{
 }
 ::-webkit-scrollbar-thumb{
   margin: 1px;
-  background-color: #b98b57;
-  border: 1px solid #c4c4c48e;
+  background-color: #7B0AFF;
   border-radius: 5px;
 }

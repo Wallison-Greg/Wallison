@@ -24,8 +24,6 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
 
-  const [blackHeader, setBlackHeader] = useState(false);
-  const [height, setHeight] = useState({sizeHeight: window.innerHeight});
   const [user, setUser] = useState(undefined);
   const {auth} = useAuthentication();
 
@@ -37,36 +35,6 @@ function App() {
     })
   }, [auth]);
 
-  const detectSize = () => { 
-    setHeight({sizeHeight: window.innerHeight})
-  }
-
-  useEffect(() => { //pegando o tamanho da tela
-    window.addEventListener('resize', detectSize)
-
-    return () => {
-      window.removeEventListener('resize', detectSize)
-    }
-
-  }, [height]);
-
-  useEffect(() => { //cabeçalho movel 
-    const scrollListener = () =>{
-      if(window.scrollY > height.sizeHeight - 115){
-        setBlackHeader(true)
-      }
-      else{
-        setBlackHeader(false)
-      }
-    }
-
-    window.addEventListener('scroll', scrollListener);
-
-    return () => {
-      window.removeEventListener('scroll', scrollListener);
-    }
-  }, [height.sizeHeight]);
-
   if(loadingUser){
     return <p>Carregando...</p>
   }
@@ -75,7 +43,7 @@ function App() {
     <div className="App">
       <AuthProvider value={{user}}>
         <BrowserRouter>
-          <Header black={blackHeader}/>
+          <Header/>
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/projects' element={user ? <AddProjects/> : <Navigate to='/'/>} />

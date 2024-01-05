@@ -4,16 +4,15 @@
     padding-bottom: 35px;
 }
 .add-project h1{
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
+    color: #292929;
 }
 .add-project p{
-    color: #c5c5c5;
+    color: #A1A1A1;
     margin-bottom: 30px;
 }
 input::placeholder{
   font-family: 'Montserrat', sans-serif;
-  color: #aaa;
+  color: #A1A1A1;
 }
 input:focus{
   outline: none;
@@ -31,7 +30,7 @@ label span{
     margin-bottom: .3em;
     font-weight: 600;
     text-align: left;
-    color: #fff;
+    color: #292929;
 }
 input{
     box-sizing: border-box;
@@ -40,7 +39,7 @@ input{
     padding: .8em 0;
     background-color: transparent;
     margin-bottom: 10px;
-    color: #f0f0f0;
+    color: #A1A1A1;
 }
 
 @media (max-width: 745px){

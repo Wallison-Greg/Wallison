@@ -1,12 +1,11 @@
 .footer {
     height: 50px;
-    
     background-color: #141414;
     border-top: 1px solid #c4c4c48e;
 }
 
 .footer p{
-  color: #B98B57;
+  color: #c5c5c5;
   font-size: 0.8125rem;
   font-weight: 600;
   text-align: center;

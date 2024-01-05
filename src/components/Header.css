@@ -4,27 +4,18 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 60px;
-    background: transparent;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    transition: all ease 0.5s;
-    border-bottom: 1px solid #c4c4c48e;
-}
-header.black{
-    background-color: #141414;
+    background: #ffffff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .1);
 }
 .logo{
-    height: 80px;
+    height: 45px;
 }
-
 .logo img{
     height: 100%;
-    filter: drop-shadow(2px 2px 2px #141414);
 }
 
 .menu-area{
@@ -43,23 +34,23 @@ header.black{
     font-weight: 600;
 }
 .menu a{
-    height: 100px;
+    height: 80px;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: #141414;
 }
 .menu a:hover{
-    border-bottom: 3px solid #91683a;
-    color: #91683a;
+    border-bottom: 3px solid #7B0AFF;
+    color: #7B0AFF;
 }
 .hamburger{
     display: none;
-    width: 60px;
-    height: 45px;
     position: relative;
+    width: 35px;
+    height: 35px;
     margin: 27px;
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -67,9 +58,9 @@ header.black{
 .hamburger span{
     display: block;
     position: absolute;
-    height: 6px;
+    height: 4px;
     width: 100%;
-    background: #604425;
+    background: #7B0AFF;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -80,10 +71,10 @@ header.black{
     top: 0px;
 }
 .hamburger span:nth-child(2), .hamburger span:nth-child(3){
-    top: 18px;
+    top: 12px;
 } 
 .hamburger span:nth-child(4){
-    top: 36px;
+    top: 23px;
 }
 .hamburger.open span:nth-child(1){
     top: 18px;
@@ -109,10 +100,13 @@ header.black{
     flex-direction: column;
     align-items: center;
 }
+.dropdown:hover .sub-menu{
+    display: initial;
+}
 .menu-dropdown{
     cursor: pointer;
     padding: 0 10px;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +119,7 @@ header.black{
     font-size: 0.8125rem;
     font-weight: 600;
     margin-right: 5px;
-    color: #ffffff;
+    color: #141414;
 }
 .perfil-dropdown{
     height: 100%;
@@ -138,10 +132,10 @@ header.black{
     border-radius: 50%;
 }
 .menu-dropdown:hover{
-    border-bottom: 3px solid #91683a;
+    border-bottom: 3px solid #7B0AFF;
 }
 .title-dropdown:hover{
-    color: #91683a;
+    color: #7B0AFF;
 }
 .acount-open{
     display: initial !important;
@@ -160,7 +154,7 @@ header.black{
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
-    border: 1px solid #91683a;
+    border: 1px solid #7B0AFF;
     background-color: #141414a6;
 }
 .acount .login{
@@ -183,11 +177,18 @@ header.black{
     text-transform: uppercase;
     text-align: center;
     font-size: 0.75rem;
-    color: #ffffff;
+    color: #fff;
     margin: 10px 0;
+}
+.acount span{
+    color: #fff;
+}
+.acount input::placeholder{
+    color: #BFC0C0;
 }
 .contact .icon{
     height: auto;
+    color: #fff;
 }
 .contact .icon:hover{
     border: none;
@@ -217,8 +218,6 @@ header.black{
     }
     .menu-area .hamburger{
         display: flex;
-        width: 40px;
-        height: 40px;
         margin-left: 70vw;
         cursor: pointer;
     }
@@ -230,10 +229,10 @@ header.black{
         z-index: 99;
         right: 0px;
         background-color: rgba(0, 0, 0, 0.87);
-        height: calc(100vh - 100px);
+        height: calc(100vh - 80px);
     }
     .menu ul:first-child{
-        margin-top: 2px;
+        margin-top: -3px;
         padding-top: 10px;
     }
     .menu a{
@@ -242,10 +241,11 @@ header.black{
         font-weight: bold;
         font-size: 1rem;
         margin: 4.8px 0px 4.8px 40px;
+        color: #fff;
     }
     .menu a:hover{
         border-bottom: none;
-        color: #b98b57;
+        color: #7B0AFF;
     }
     .close ul {
         display: flex;
@@ -262,6 +262,10 @@ header.black{
     .menu-dropdown .title-dropdown{
         font-size: 0.938rem;
         margin-left: 5px;
+        color: #fff;
+    }
+    .title-dropdown:hover{
+        color: #7B0AFF;
     }
     .sub-menu{
         top: 40%;

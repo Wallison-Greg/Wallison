@@ -1,13 +1,10 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './Home.css'
 
 //icons 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-
-//img
-import PerfilBanner from '../../assets/img/perfil_banner.png';
 
 //components
 import TitleSection from '../../components/TitleSection';
@@ -17,34 +14,29 @@ import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
 const Home = () => {
 
-    const {documents: projects, loading} = useFetchDocuments('projects')
-
-    useEffect(() => {
-        const titulo = document.getElementById('dev');
-
-        const typeWrite = (element) => {
-
-            const textoArray = element.innerHTML.split('');
-
-            element.innerHTML = ''
-
-            textoArray.forEach((letra, i) => {
-                setTimeout(() => element.innerHTML += letra, 100 * i)
-            });
-        }
-
-        typeWrite(titulo)
-    }, []);
+    const {documents: projects, loading} = useFetchDocuments('projects');
 
   return (
     <main>
 
         <section className='banner'>
-            <div class="banner-sombra">
-                <div className='banner-info'>
-                    <h3>Oi, eu sou</h3>
-                    <h1>Wallison Gregorio.</h1>
-                    <h3>Desenvolvedor <span id='dev'>Front-end</span></h3>
+                <div className='banner-info container'>
+                    <div className='banner-title'>
+                        <div className='first-line'>
+                            <span className='title-item'>Oi,</span>
+                            <span className='title-item'>eu</span>
+                            <span className='title-item'>sou</span>
+                            <span className='title-item'>Wallison</span>
+                            <span className='title-item'>Gregorio</span>
+                        </div>
+                        <div className='second-line'>
+                            <span className='title-item'>Desenvolvedor</span>
+                            <span className='title-item'>Frontend</span>
+                        </div>
+                    </div>
+                    <h2 className='sub-title'>
+                        um desenvolvedor web focado no frontend
+                    </h2>
                     <div className='banner-contact'>
                         <a
                             href='https://github.com/Wallison-Greg'
@@ -62,11 +54,6 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-                <div className='banner-img'>
-                    <img src={PerfilBanner} alt='imagem banner'/>
-                    <div className='sombra'></div>
-                </div>
-            </div>
         </section>
 
         <section className='projects'>

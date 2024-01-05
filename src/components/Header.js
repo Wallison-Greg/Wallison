@@ -3,7 +3,7 @@ import './Header.css'
 import { NavLink } from 'react-router-dom'
 
 //img
-import Logo from '../assets/img/logo_2.png'
+import Logo from '../assets/img/logo1.png'
 import LoginImg from '../assets/img/login_img.png'
 
 //icons 
@@ -17,7 +17,7 @@ import { useAuthValue } from '../context/AuthContext';
 //firebase
 import { useAuthentication } from '../hooks/useAuthentication';
 
-const Header = ({black}) => {
+const Header = () => {
 
     const {user} = useAuthValue();
     const {logout, login, error: authError} = useAuthentication();
@@ -47,16 +47,6 @@ const Header = ({black}) => {
         }
     }, [authError]);
 
-    useEffect(() => {
-
-        if(acountActive){
-            setTimeout(() => {
-                setAcountActive(!acountActive);
-            }, 20000)
-        }
-
-    })
-
     const menuMode = () => {
         setActive(!active);
     };
@@ -66,7 +56,7 @@ const Header = ({black}) => {
     };
 
   return (
-    <header className={black ? "black" : ""}>
+    <header>
         <div className='logo'>
             <NavLink to='/'>
                 <img src={Logo} alt='logo'/>

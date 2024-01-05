@@ -1,13 +1,14 @@
 .skills{
-    padding-bottom: 50px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 80px);
 }
 
 .skills .title-area{
-    margin: 150px 0px 20px 0px;
+    margin: 130px 0px 40px 0px;
 }
 
 .skills-area ul, .projects-area ul{
@@ -25,22 +26,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #B98B57;
-    color: #ffff;
+    border-left: 1px solid #4A0AFF;
     transition: .35s;
 }
 .skill:last-child{
-    border-right: 1px solid #B98B57;
+    border-right: 1px solid #4A0AFF;
 }
 .skill .title{
     margin: 20px 0px 5px 0px;
     font-weight: 600;
+    color: #292929;
 }
 .skill .title-marc{
-    color: #B98B57;
+    color: #4A0AFF;
 }
 .skill .desc, .skill .lvl{
-    color: #e9e9e9d5;
+    color: #8b8b8b;
     font-size: 0.75rem;
 }
 .skill .desc{

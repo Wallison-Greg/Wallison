@@ -1,5 +1,4 @@
 .page-erro{
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,15 +7,10 @@
 }
 .page-erro h1{
     font-size: 6rem;
-    text-shadow: 3px 3px 4px #000;
+    color: #292929;
 }
 .page-erro h2{
     font-size: 0.9rem;
     margin-top: 15px;
-    color: #e9e9e9d5;
-}
-.page-erro p{
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #e9e9e9d5;
+    color: #686868;
 }
