@@ -12,7 +12,7 @@ header{
     box-shadow: 0 10px 50px rgba(0, 0, 0, .1);
 }
 .logo{
-    height: 45px;
+    height: 35px;
 }
 .logo img{
     height: 100%;
@@ -107,19 +107,11 @@ header{
     cursor: pointer;
     padding: 0 10px;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.title-dropdown{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
     font-size: 0.8125rem;
     font-weight: 600;
-    margin-right: 5px;
-    color: #141414;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 .perfil-dropdown{
     height: 100%;
@@ -133,8 +125,6 @@ header{
 }
 .menu-dropdown:hover{
     border-bottom: 3px solid #7B0AFF;
-}
-.title-dropdown:hover{
     color: #7B0AFF;
 }
 .acount-open{
@@ -210,8 +200,6 @@ header{
 
 
 @media (max-width: 745px){
-    /*menu responsivo*/
-
     .menu-area{
         align-items: center;
         flex-direction: column;
@@ -256,15 +244,11 @@ header{
     }
     .menu-dropdown{
         height: 60px;
-        flex-direction: row-reverse;
         margin-left: 40px;
-    }
-    .menu-dropdown .title-dropdown{
         font-size: 0.938rem;
-        margin-left: 5px;
         color: #fff;
     }
-    .title-dropdown:hover{
+    .menu-dropdown:hover{
         color: #7B0AFF;
     }
     .sub-menu{

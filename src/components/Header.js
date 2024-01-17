@@ -3,8 +3,7 @@ import './Header.css'
 import { NavLink } from 'react-router-dom'
 
 //img
-import Logo from '../assets/img/logo1.png'
-import LoginImg from '../assets/img/login_img.png'
+import Logo from '../assets/img/logo.png'
 
 //icons 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -90,10 +89,7 @@ const Header = () => {
                     )}
                     <li className='dropdown'>
                         <div className="menu-dropdown" onClick={subMenuMode}>
-                            <div className='title-dropdown'>Contato</div>
-                            <div className='perfil-dropdown'>
-                                <img src={LoginImg} alt='login img'/>
-                            </div>
+                            Contato
                         </div>
                         <div className={acountActive ? 'acount-open sub-menu' : 'sub-menu'}>
                             <div class="acount">
