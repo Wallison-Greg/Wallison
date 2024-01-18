@@ -9,24 +9,42 @@ import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
 const Skills = () => {
 
-    const {documents: listSkills, loading} = useFetchDocuments('technologies');
+    const {documents: listFront} = useFetchDocuments('frontend');
+    const {documents: listBack} = useFetchDocuments('backend');
 
   return (
-        <section className='skills'>
-            {loading && <p>Carregando...</p>}
-            <TitleSection title='habilidades'/>
+        <section className='skills'>   
+            <TitleSection title='front-end'/>
             <div className='skills-area'>
                 <ul>
-                    {listSkills && listSkills.map((item, key) => (
+                    {listFront && listFront.map((item, key) => (
                         <li className='skill' key={key}>
                             <div className='logo'>
                                 <img src={item.src} alt={item.alt} />
                             </div>
                             <div className='title'>{item.title}</div>
-                            <div className='lvl'>{item.nivel}</div>
                             <div className='desc'>
                                 <p>{item.desc}</p>
                             </div>
+                            <div className='exp'>{item.exp}</div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <TitleSection title='back-end'/>
+            <div className='skills-area'>
+                <ul>
+                    {listBack && listBack.map((item, key) => (
+                        <li className='skill' key={key}>
+                            <div className='logo'>
+                                <img src={item.src} alt={item.alt} />
+                            </div>
+                            <div className='title'>{item.title}</div>
+                            <div className='desc'>
+                                <p>{item.desc}</p>
+                            </div>
+                            <div className='exp'>{item.exp}</div>
                         </li>
                     ))}
                 </ul>
@@ -35,4 +53,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Skills;

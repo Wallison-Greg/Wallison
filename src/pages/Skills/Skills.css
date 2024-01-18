@@ -1,14 +1,9 @@
 .skills{
-    margin-bottom: 130px;
+    margin: 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-}
-
-.skills .title-area{
-    margin: 130px 0px 40px 0px;
 }
 
 .skills-area ul, .projects-area ul{
@@ -20,11 +15,11 @@
     transform: scale(0.9);
 }
 .skill{
-    margin: 30px 0px 40px 0px;
+    margin: 35px 0;
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-left: 1px solid #4A0AFF;
     transition: .35s;
@@ -33,23 +28,23 @@
     border-right: 1px solid #4A0AFF;
 }
 .skill .title{
-    margin: 20px 0px 5px 0px;
+    margin: 10px 0;
     font-weight: 600;
     color: #292929;
 }
-.skill .title-marc{
-    color: #4A0AFF;
-}
-.skill .desc, .skill .lvl{
-    color: #8b8b8b;
+
+.skill .desc, .skill .exp{
     font-size: 0.75rem;
+    text-align: justify;
+    max-width: 182px;
 }
 .skill .desc{
-    text-align: justify;
-    max-width: 177px;
+    color: #8b8b8b;
 }
-.skill .lvl{
-    margin-bottom: 20px;
+.skill .exp{
+    margin-top: 10px;
+    color: #646464;
+    font-weight: 600;
 }
 
 @media (max-width: 895px){
@@ -59,11 +54,11 @@
     .skill .title{
         font-size: 0.875rem;
     }
-    .skill .desc{
+    .skill .desc, .skill .exp{
         font-size: 0.6875rem;
     }
 }
-@media (max-width: 745px){
+@media (max-width: 800px){
     .skill{
         margin: 15px 0;
         border: none;

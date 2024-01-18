@@ -9,7 +9,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, .1);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
 }
 .logo{
     height: 35px;
