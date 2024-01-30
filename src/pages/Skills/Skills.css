@@ -40,6 +40,7 @@
 }
 .skill .desc{
     color: #8b8b8b;
+    flex: 1;
 }
 .skill .exp{
     margin-top: 10px;
